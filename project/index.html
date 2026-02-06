@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/midas-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intranet Corporativa - Midas Dominicana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#00B74F">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MIDAS">
+  <link rel="apple-touch-icon" href="/midas-icon.png">
+  <meta property="og:image" content="/midas-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/midas-logo.png">
+</head>
+
+<body style="margin: 0; padding: 0;">
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Splash Screen (Instant Render) -->
+  <div id="splash-screen"
+    style="position: fixed; inset: 0; background: #0F172A; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 9999; transition: opacity 0.5s ease-out, visibility 0.5s;">
+    <div
+      style="position: relative; width: 140px; height: 140px; display: flex; align-items: center; justify-content: center;">
+      <img src="/midas-logo.png" alt="Midas Dominicana"
+        style="width: 100%; height: auto; animation: pulse-logo 2s infinite ease-in-out; filter: brightness(0) invert(1);">
+      <div
+        style="position: absolute; bottom: -24px; left: 50%; transform: translateX(-50%); width: 40px; height: 4px; background: #00B74F; border-radius: 2px; animation: expand-line 2s infinite ease-in-out;">
+      </div>
+    </div>
+    <div
+      style="margin-top: 48px; color: #94A3B8; font-family: 'Inter', sans-serif; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;">
+      Cargando MIDAS...
+    </div>
+  </div>
+
+  <style>
+    @keyframes pulse-logo {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+    }
+
+    @keyframes expand-line {
+
+      0%,
+      100% {
+        width: 20px;
+        opacity: 0.5;
+      }
+
+      50% {
+        width: 60px;
+        opacity: 1;
+      }
+    }
+
+    .splash-fade-out {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+  </style>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script>
+    // Fail-safe: Remove splash screen after 6 seconds even if React fails
+    setTimeout(() => {
+      const splash = document.getElementById('splash-screen');
+      if (splash && !splash.classList.contains('splash-fade-out')) {
+        console.warn('Splash screen fail-safe triggered');
+        splash.classList.add('splash-fade-out');
+        setTimeout(() => splash.remove(), 500);
+      }
+    }, 6000);
+  </script>
+</body>
+
+</html>

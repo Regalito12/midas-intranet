@@ -1,0 +1,35 @@
+# Dependencies
+project/node_modules/
+project/backend/node_modules/
+
+# Environment variables
+project/backend/.env
+
+# Build outputs
+project/dist/
+project/backend/dist/
+
+# Logs
+project/backend/logs/
+*.log
+
+# Database
+*.sql.backup
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Uploads (images and files from users)
+project/backend/uploads/
+
+# Temporary files
+*.tmp
+*.temp

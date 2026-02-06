@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: midas-intranet-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: DB_HOST
+        fromValue: ${DB_HOST}
+      - key: DB_USER
+        fromValue: ${DB_USER}
+      - key: DB_PASSWORD
+        fromValue: ${DB_PASSWORD}
+      - key: DB_NAME
+        fromValue: ${DB_NAME}
+      - key: JWT_SECRET
+        fromValue: ${JWT_SECRET}
