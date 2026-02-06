@@ -36,6 +36,18 @@ Sistema de Gestión Empresarial Integral desarrollado para **MIDAS Dominicana**.
 
 ---
 
+## 🔑 Credenciales de Acceso (Solo Evaluación)
+
+Para probar el sistema, se han configurado los siguientes usuarios de prueba:
+
+| Usuario | Contraseña | Rol |
+| :--- | :--- | :--- |
+| **admin** | `Midas2026!` | Administrador Total |
+| **Jorddy** | `Midas2026!` | Empleado / Usuario |
+| **Junior** | `Midas2026!` | Soporte IT |
+
+---
+
 **Desarrollado por**: Jorddy Rosario (Pasante) 🎯  
 **Contacto**: [jordanysjor@gmail.com](mailto:jordanysjor@gmail.com)  
 **Propiedad de**: MIDAS Dominicana
