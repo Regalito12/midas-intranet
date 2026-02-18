@@ -58,9 +58,10 @@ function AdminBackup({ user }: AdminBackupProps) {
         try {
             // Usamos window.open para descargar el archivo directamente
             const token = localStorage.getItem('token');
-            const downloadUrl = `http://localhost:3001/api/backups/download/${filename}?token=${token}`; // El token debería ir en header, pero para download directo via navegador a veces se requiere query param o manejo de blob.
+            const host = window.location.hostname;
+            // const downloadUrl = `http://${host}:3001/api/backups/download/${filename}?token=${token}`; 
 
-            // Mejor approach: Request con blob
+            // Mejor approach: Request con blob (ya manejado por api.get abajo)
             const response = await api.get(`/backups/download/${filename}`, {
                 responseType: 'blob'
             });

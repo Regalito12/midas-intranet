@@ -42,7 +42,7 @@ const securityMiddleware = (app) => {
                 ],
                 connectSrc: [
                     "'self'",
-                    "http://localhost:3001",
+                    "http://172.16.45.2:3001",
                     "https://www.google.com"  // reCAPTCHA validation
                 ],
                 frameSrc: [

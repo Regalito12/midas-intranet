@@ -121,7 +121,7 @@ app.use(errorHandler);
 const server = app.listen(config.port, '0.0.0.0', () => {
     logger.info(`🚀 MIDAS Intranet Backend started on port ${config.port}`);
     if (!config.isProduction) {
-        console.log(`🔗 API: http://localhost:${config.port}/api`);
+        console.log(`🔗 API: http://172.16.45.2:${config.port}/api`);
     }
 });
 

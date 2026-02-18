@@ -107,7 +107,7 @@ const config = {
     cors: {
         allowedOrigins: process.env.ALLOWED_ORIGINS
             ? process.env.ALLOWED_ORIGINS.split(',').map(s => s.trim())
-            : ['http://localhost:5173']
+            : ['http://172.16.45.2:8080']
     },
 
     // SMTP

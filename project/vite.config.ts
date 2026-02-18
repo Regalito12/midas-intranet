@@ -12,11 +12,11 @@ export default defineConfig({
     host: true,
     hmr: {
       protocol: 'wss',
-      host: 'localhost',
+      host: '172.16.45.2',
     },
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:3001',
+        target: 'http://172.16.45.2:3001',
         changeOrigin: true,
         secure: false,
       },

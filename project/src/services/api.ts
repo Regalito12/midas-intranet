@@ -11,9 +11,10 @@
 
 import axios from 'axios';
 
+const host = typeof window !== 'undefined' ? window.location.hostname : '172.16.45.2';
 export const BASE_URL = import.meta.env.VITE_API_URL
     ? import.meta.env.VITE_API_URL.replace(/\/api$/, '')
-    : 'http://localhost:3001';
+    : `http://${host}:3001`;
 
 const api = axios.create({
     baseURL: import.meta.env.VITE_API_URL || `${BASE_URL}/api`,

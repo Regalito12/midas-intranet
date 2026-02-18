@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.4.32-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: intranet_db
+-- Host: 172.16.45.2    Database: intranet_db
 -- ------------------------------------------------------
 -- Server version	10.4.32-MariaDB
 
@@ -448,7 +448,7 @@ CREATE TABLE `employees` (
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES ('emp_1','Antonio Andujar','admin@midas.com','Administrador','GENERAL',NULL,'http://localhost:3001/uploads/optimized-avatar-1769628401613-735855232.jpeg',0,'activo',1,'8098342333','2025-12-06 17:26:09',NULL),('emp_3','Jorddy Rosario','Jordanysjor@gmail.com','Desarrollador Junior','Tecnologia',NULL,'http://localhost:3001/uploads/optimized-avatar-1769628552401-577954203.jpeg',0,'activo',3,'','2025-12-10 12:23:07',NULL),('emp_4','Junior Chalas','soporte@midas.com','Soporte Tecnico','Tecnologia',NULL,'http://localhost:3001/uploads/optimized-avatar-1769630981512-192625060.png',0,'activo',4,'','2025-12-10 15:40:15',NULL);
+INSERT INTO `employees` VALUES ('emp_1','Antonio Andujar','admin@midas.com','Administrador','GENERAL',NULL,'http://172.16.45.2:3001/uploads/optimized-avatar-1769628401613-735855232.jpeg',0,'activo',1,'8098342333','2025-12-06 17:26:09',NULL),('emp_3','Jorddy Rosario','Jordanysjor@gmail.com','Desarrollador Junior','Tecnologia',NULL,'http://172.16.45.2:3001/uploads/optimized-avatar-1769628552401-577954203.jpeg',0,'activo',3,'','2025-12-10 12:23:07',NULL),('emp_4','Junior Chalas','soporte@midas.com','Soporte Tecnico','Tecnologia',NULL,'http://172.16.45.2:3001/uploads/optimized-avatar-1769630981512-192625060.png',0,'activo',4,'','2025-12-10 15:40:15',NULL);
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -546,7 +546,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES ('1765375255149','San Valero Lo maximo!','Se ha podido ver que San Valero ha demostrado que sus estudiantes son lo maximo','San valero e la vuelta','comunicado','2025-12-10 10:00:55','Antonio Andujar','http://localhost:3301/uploads/Logo_300-1765375201190-484124239.jpg');
+INSERT INTO `news` VALUES ('1765375255149','San Valero Lo maximo!','Se ha podido ver que San Valero ha demostrado que sus estudiantes son lo maximo','San valero e la vuelta','comunicado','2025-12-10 10:00:55','Antonio Andujar','http://172.16.45.2:3301/uploads/Logo_300-1765375201190-484124239.jpg');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -603,7 +603,7 @@ CREATE TABLE `news_comments` (
 
 LOCK TABLES `news_comments` WRITE;
 /*!40000 ALTER TABLE `news_comments` DISABLE KEYS */;
-INSERT INTO `news_comments` VALUES ('comm_1765375276617','1765375255149',NULL,'1','Antonio Andujar','http://localhost:3301/uploads/optimized-avatar-1765083463325-208626736.jpeg','increible!!','2025-12-10 10:01:16'),('comm_1765387656405','1765375255149','comm_1765375276617','3','Jorddy Rosario','http://localhost:3301/uploads/optimized-avatar-1765387622622-258184103.jpeg','Es lo máximo!!!','2025-12-10 13:27:36'),('comm_1765387705442','1765375255149',NULL,'3','Jorddy Rosario','http://localhost:3301/uploads/optimized-avatar-1765387622622-258184103.jpeg','Gran Politécnico 😎😎😎','2025-12-10 13:28:25'),('comm_1765395962561','1765375255149','comm_1765387705442','4','Junior Chalas','http://localhost:3301/uploads/optimized-avatar-1765395707337-960143181.jpeg','Cierto!!','2025-12-10 15:46:02');
+INSERT INTO `news_comments` VALUES ('comm_1765375276617','1765375255149',NULL,'1','Antonio Andujar','http://172.16.45.2:3301/uploads/optimized-avatar-1765083463325-208626736.jpeg','increible!!','2025-12-10 10:01:16'),('comm_1765387656405','1765375255149','comm_1765375276617','3','Jorddy Rosario','http://172.16.45.2:3301/uploads/optimized-avatar-1765387622622-258184103.jpeg','Es lo máximo!!!','2025-12-10 13:27:36'),('comm_1765387705442','1765375255149',NULL,'3','Jorddy Rosario','http://172.16.45.2:3301/uploads/optimized-avatar-1765387622622-258184103.jpeg','Gran Politécnico 😎😎😎','2025-12-10 13:28:25'),('comm_1765395962561','1765375255149','comm_1765387705442','4','Junior Chalas','http://172.16.45.2:3301/uploads/optimized-avatar-1765395707337-960143181.jpeg','Cierto!!','2025-12-10 15:46:02');
 /*!40000 ALTER TABLE `news_comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
